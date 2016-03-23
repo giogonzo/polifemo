@@ -1,20 +1,37 @@
-/* eslint-disable */
+var domain = require('../lib/domain');
 var createExpressPlayer = require('../lib/createExpressPlayer');
-var responses = require('./getResponsesFromHAR');
-var app = createExpressPlayer([
+var fixtures = [
   {
-    id: '/orders',
-    responses: responses
-  },
-  {
-    id: '/login',
-    responses: []
+    id: 'myid',
+    responses: [
+      {
+        "url": "/api/user",
+        "payload": {
+          "email": "user@domain.com"
+        },
+        "delay": 305.5489999242127
+      },
+      {
+        "url": "/api/orders",
+        "payload": [
+          {
+            "id": "ord1",
+            "product": "iPad",
+            "amount": 400
+          }
+        ],
+        "delay": 604.124000063166
+      }
+    ]
   }
-], 0);
+];
+var app = createExpressPlayer(fixtures.map(domain.Fixture), 0);
 
-var PORT = 4000;
+app.player.setId('myid');
+
+var PORT = 5002;
 app.listen(PORT, function () {
-  console.log('express server listening on http://localhost:%s/', PORT)
+  console.log('express server listening on http://localhost:%s/', PORT); // eslint-disable-line no-console
 });
 
 // setTimeout(function () {

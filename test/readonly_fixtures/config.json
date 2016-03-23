@@ -1,0 +1,22 @@
+{
+  "tests": {
+    "/orders": {
+      "id": "/orders",
+      "client": {
+        "path": "/orders"
+      },
+      "server": {
+        "file": "1.har"
+      }
+    },
+    "/worklists": {
+      "id": "/worklists",
+      "client": {
+        "path": "/worklists"
+      },
+      "server": {
+        "file": "slash-worklists.har"
+      }
+    }
+  }
+}

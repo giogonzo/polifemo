@@ -3,7 +3,6 @@
 ```js
 type Response = {
   url: string,
-  order: number,
   payload: any,
   delay: number
 };
@@ -33,7 +32,7 @@ type GenericServer = {
 declare function createGenericResponsePlayer(responses: Array<Response>, delay?: number): GenericServer;
 ```
 
-# Create a generic server
+# Create a generic player
 
 ```js
 type Server = {
@@ -43,13 +42,13 @@ type Server = {
   getErrors(id?: string): Array<string>
 };
 
-declare function createGenericServer(fixtures: Array<Fixture>, delay?: number): Server;
+declare function createGenericPlayer(fixtures: Array<Fixture>, delay?: number): Server;
 ```
 
-# Create a mock express server
+# Create an express player app
 
 ```js
-declare function createExpressServer(fixtures: Array<Fixture>, delay?: number);
+declare function createExpressPlayer(fixtures: Array<Fixture>, delay?: number);
 ```
 
 ## Endpoints
@@ -83,3 +82,22 @@ GET /*
 ```
 
 Mocked endpoints.
+
+# Config
+
+```js
+type TestId = string;
+type Test = {
+  id: string,
+  client: {
+    path: string
+  },
+  server?: {
+    file: string
+  },
+  createdAt?: string,
+  description?: string,
+  author?: string
+};
+type Tests = {[key: TestId]: Test};
+```
