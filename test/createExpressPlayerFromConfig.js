@@ -1,5 +1,5 @@
 var createExpressPlayerFromConfig = require('../lib/createExpressPlayerFromConfig');
-var config = require('./fixtures/index.json');
+var config = require('./fixtures/config.json');
 var app = createExpressPlayerFromConfig(config);
 
 // app.player.setId('/orders');
