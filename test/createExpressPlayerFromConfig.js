@@ -2,7 +2,7 @@ var createExpressPlayerFromConfig = require('../lib/createExpressPlayerFromConfi
 var config = require('./fixtures/config.json');
 var app = createExpressPlayerFromConfig(config);
 
-// app.player.setId('/orders');
+app.player.setId('/worklists');
 
 var PORT = 5000;
 app.listen(PORT, function () {

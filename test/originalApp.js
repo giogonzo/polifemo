@@ -25,6 +25,11 @@ app.get('/api/user', function (req, res) {
   }, 300);
 });
 
+// catch 404 and forward to error handler
+app.use(function(req, res) {
+  res.status(404).json({});
+});
+
 var PORT = 4000;
 app.listen(PORT, function () {
   console.log('express server listening on http://localhost:%s/', PORT); // eslint-disable-line no-console
