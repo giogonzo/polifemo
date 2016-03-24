@@ -29,7 +29,6 @@
     "tcomb": "3.0.0"
   },
   "devDependencies": {
-    "compress": "0.99.0",
     "compression": "1.6.1"
   }
 }
