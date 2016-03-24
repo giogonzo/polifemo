@@ -1,14 +1,10 @@
 var express = require('express');
+var compression = require('compression');
+var addCORS = require('../lib/addCORS');
 
-var app = express();
+var app = addCORS(express());
 
-// CORS
-app.use(function (req, res, next) {
-  res.set('Access-Control-Allow-Origin', '*');
-  res.set('Access-Control-Allow-Headers', 'Content-Type,Authorization,Accept');
-  res.set('Access-Control-Allow-Methods', 'GET,PUT,POST,OPTIONS,DELETE');
-  next();
-});
+app.use(compression());
 
 app.get('/api/orders', function (req, res) {
   setTimeout(function () {
@@ -16,7 +12,8 @@ app.get('/api/orders', function (req, res) {
       {
         id: 'ord1',
         product: 'iPad',
-        amount: 400
+        amount: 400,
+        updatedAt: new Date().toISOString()
       }
     ]);
   }, 600);

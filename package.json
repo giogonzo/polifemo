@@ -8,9 +8,9 @@
     "test-getResponsesFromHAR": "DEBUG=polifemo:* node test/getResponsesFromHAR.js",
     "test-createResponsePlayer": "DEBUG=polifemo:* node test/createResponsePlayer.js",
     "test-createExpressPlayer": "DEBUG=polifemo:* node test/createExpressPlayer.js",
-    "test-createExpressPlayerFromConfig": "DEBUG=polifemo:* node test/createExpressPlayerFromConfig.js",
-    "test-createExpressRecorder": "DEBUG=polifemo:* node test/createExpressRecorder.js",
-    "test-originalApp": "node test/originalApp.js"
+    "play": "DEBUG=polifemo:* node test/createExpressPlayerFromConfig.js",
+    "start": "node test/originalApp.js",
+    "record": "DEBUG=polifemo:* node test/createExpressRecorder.js"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,9 @@
     "express": "4.13.4",
     "express-http-proxy": "0.6.0",
     "tcomb": "3.0.0"
+  },
+  "devDependencies": {
+    "compress": "0.99.0",
+    "compression": "1.6.1"
   }
 }
