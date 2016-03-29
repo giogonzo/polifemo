@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/gcanti/polifemo#readme",
   "dependencies": {
+    "body-parser": "1.15.0",
     "debug": "2.2.0",
     "express": "4.13.4",
     "express-http-proxy": "0.6.0",

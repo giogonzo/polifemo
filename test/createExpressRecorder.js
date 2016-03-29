@@ -7,9 +7,11 @@ var app = createExpressRecorder(target, fixtureDir);
 
 app.setId('/worklists');
 
-setTimeout(function () {
-  app.dump(fixtureDir, true);
-}, 10000);
+// app.saveScreenshot(fixtureDir, 'ciao');
+
+// setTimeout(function () {
+//   app.saveConfig(fixtureDir, true);
+// }, 10000);
 
 var PORT = 5000;
 app.listen(PORT, function () {

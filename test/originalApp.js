@@ -27,7 +27,7 @@ app.get('/api/user', function (req, res) {
 
 // catch 404 and forward to error handler
 app.use(function(req, res) {
-  res.status(404).json({});
+  res.status(404).json({error: 'not found'});
 });
 
 var PORT = 4000;
