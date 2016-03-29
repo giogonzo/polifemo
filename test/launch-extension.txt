@@ -1,1 +1,3 @@
 open -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --load-extension="/Users/giulio/Documents/Projects/github/polifemo/lib/ext/"
+
+http://ams.omnilab-development.com/#/login
